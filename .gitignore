@@ -19,3 +19,6 @@ yarn-error.log*
 
 # Ignore api folder if still present locally
 /api
+
+# environment variable
+.env

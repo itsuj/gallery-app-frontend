@@ -9,14 +9,14 @@ const ImageGallery = () => {
             return; // Do nothing if the query is empty
         }
 
-        fetch(`http://localhost:8080/api/photos?query=${query}`)
+        fetch(`${process.env.REACT_APP_API_URL}/api/photos?query=${query}`)
             .then(response => response.json())
             .then(data => setImages(data.results))
             .catch(error => console.error("Error fetching photos:", error));
     };
     useEffect(()=>{
         // Fetch some default images when page first loads
-        fetch(`http://localhost:8080/api/photos?query=nature`)
+        fetch(`${process.env.REACT_APP_API_URL}/api/photos?query=nature`)
         .then(response => response.json())
         .then(data => setImages(data.results))
         .catch(error => console.err("Error while showing photos",error));
