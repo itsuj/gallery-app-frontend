@@ -5,7 +5,7 @@ const LoadingSpinner = () => {
     return (
         <div className="spinner-container">
         <div className="loading-spinner"></div>
-        Due to server inactivity, the gallery may take up to 50 seconds or more to load initially. ...Please wait for the images to appear
+        Due to server inactivity, the gallery may take 50 seconds or more to load. Please wait while the loading animation is displayed
         </div>
     )
 }
